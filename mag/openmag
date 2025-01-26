@@ -1,0 +1,1 @@
+magic -rcfile $PDKPATH/libs.tech/magic/sky130A.magicrc

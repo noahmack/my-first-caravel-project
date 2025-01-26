@@ -1,0 +1,8 @@
+| units: 500000 tech: sky130A format: MIT
+x Vin VDD Vout VDD s=11600,516 d=11600,516 l=100 w=200 x=1062 y=667 sky130_fd_pr__pfet_g5v0d10v5
+x Vin VSS Vout VSS s=11600,516 d=11600,516 l=100 w=200 x=1076 y=-197 sky130_fd_pr__nfet_g5v0d10v5
+R Vout 1241
+R Vin 737
+C VDD0 2.8
+R VDD 5879
+R VSS 6827

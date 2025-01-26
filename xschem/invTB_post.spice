@@ -1,0 +1,23 @@
+** sch_path: /home/noahmack/ChipISU/my-first-caravel-project/xschem/invTB_post.sch
+**.subckt invTB_post
+x1 Vout Vin GND VDD inverter
+V1 Vin GND pulse(0 1.8 1ns 1ns 1ns 5ns 10ns)
+V2 VDD GND 2.5
+**** begin user architecture code
+
+.param mc_mm_switch=0
+.param mc_pr_switch=0
+.include /home/noahmack/ChipISU/my-first-caravel-project/dependencies/pdks/sky130A/libs.tech/ngspice/corners/tt.spice
+.include /home/noahmack/ChipISU/my-first-caravel-project/dependencies/pdks/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical.spice
+.include /home/noahmack/ChipISU/my-first-caravel-project/dependencies/pdks/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice
+.include /home/noahmack/ChipISU/my-first-caravel-project/dependencies/pdks/sky130A/libs.tech/ngspice/corners/tt/specialized_cells.spice
+
+
+.include /home/noahmack/ChipISU/my-first-caravel-project/mag/inverter.spice
+.tran .01n 1u
+.save all
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end
